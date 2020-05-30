@@ -1,0 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, img, ol, ul, li,
+caption, article, aside, details,
+figure, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-color: #efefef;
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+
+section {
+    padding: 1rem;
+}
+
+.c-heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.c-message {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.c-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.c-list__item {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.c-list__item:first-child {
+    margin-top: 0;
+}
+
+.c-tweet {
+    background-color: #fff;
+    width: 75%;
+    overflow: hidden;
+}
+.c-tweet__header {
+    display: flex;
+    align-items: center;
+}
+.c-tweet__avatar {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.c-tweet__name {
+    font-size: 1.25rem;
+}
+.c-tweet__text {
+    margin: 1rem 0;
+}
+.c-tweet__created {
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.animate-in {
+    animation: slidein 1s forwards, fadeIn 1s forwards;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-timing-function: ease-in-out;
+    margin-left: 100%;
+    opacity: 0;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
